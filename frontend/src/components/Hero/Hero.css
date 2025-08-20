@@ -1,0 +1,19 @@
+body{
+    background-color: white !important;
+}
+@media screen and (max-width:400px) {
+    body{
+        
+    }
+    .left{
+        
+    }
+    .left #headingone{
+        font-size:60px !important;
+        
+    }
+    .right{
+        display: none !important;
+    }
+    
+}

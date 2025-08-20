@@ -1,0 +1,14 @@
+@media screen and (max-width:400px) {
+    body{
+    }
+    .boxparent{
+        flex-direction: column !important;
+    }
+    .boxparent .box{
+        width:90vw !important;
+    }
+    .boxparent .box img{
+        width:80vw !important;
+    }
+    
+}

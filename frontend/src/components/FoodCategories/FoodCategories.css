@@ -1,0 +1,16 @@
+@media screen and (max-width:400px) {
+    body{
+        
+    }
+    .boxcontainer{
+        flex-direction: column !important;
+
+    }
+    .boxcontainer .food-card{
+     width:90vw !important;
+    }
+    .boxcontainer .food-card img{
+        width:80vw !important;
+    }
+    
+}
