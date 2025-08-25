@@ -1,7 +1,40 @@
 @media screen and (max-width:400px) {
     .navbar{
-        width:40vw !important;
-    }
+  justify-content: center !important;
+  
+      height:10vh;
+        width:179vw !important;
+  border: 1px solid black;
+      }
+
+      #logo{
+      }
+      #order{
+ width:43vw !important;
+ color:blue !important;
+ font-weight: bold !important;
+      }
+      i{
+        color:black !important;
+      }
+
+      .navbar h1{
+        margin-left: 2px !important;
+        font-size: 36px !important;
+        margin-top: 5% !important;
+      }
+      .navbar img{
+        margin-left:3% !important;
+        margin-top:2% !important;
+      }
+      .navbar h3{
+        font-size: 23px !important;
+        font-weight: bolder;
+        margin-top: 1% !important;
+      }
+      
+ 
+     
     
     
 }

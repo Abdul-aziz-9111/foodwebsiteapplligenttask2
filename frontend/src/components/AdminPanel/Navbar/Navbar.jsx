@@ -16,15 +16,15 @@ const Navbar = ({children}) => {
         {/* Left */}
         <div className='left flex' style={{ marginLeft: '4%' }}>
 <Link to='/foodPage'><img 
-            className='' 
-            style={{ height: '35px', width: '40px' }} 
+              className='' 
+              style={{ height: '28px', width: '33px',marginTop:'12%' }} 
             src="https://foodies-zone.netlify.app/assets/food-logo-4PF6fRLL.png" 
             alt="" 
-           
+            id="logo" 
            />
            </Link>
        
-          &nbsp;  
+            
           <h1 className='font-bold text-3xl'>Foodie</h1>
         </div>
         <div className='searchbar'>
@@ -45,7 +45,7 @@ const Navbar = ({children}) => {
           <h3>About</h3>
           <h3>Contact</h3>
 
-          <button
+          <button id="order"
             className="font-normal bg-gradient-to-r from-yellow-300 to-yellow-400 rounded-2xl text-white" 
             style={{ height: '32px', width: '105px' }}
           >

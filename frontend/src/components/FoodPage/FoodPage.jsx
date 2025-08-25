@@ -4,27 +4,46 @@
     import {useState,useEffect} from 'react'
 import Footer from '../Footer/Footer'
 import { Link } from 'react-router-dom'
+
 const FoodPage = () => {
         const [foods,setFoods] = useState([]);
+        const [searchTerm,setSearchTerm]=useState("");
+        const [filteredFoods,setFilteredFoods]= useState([]);
+
         useEffect(()=>{
-            fetch('http://10.166.233.193:3000/')
+            fetch('http://localhost:3000/')
         .then(res=>res.json())
-        .then(data=>
-            setFoods(data)
-        )
+        .then(data=>{
+            setFoods(data);
+           setFilteredFoods(data);
+        })
         .catch(err=>console.log(err))
         
         },[])
+        const handleSearch = ()=>{
+            if(searchTerm.trim()===""){
+                setFilteredFoods(foods);
+
+            }
+            else{
+                const result = foods.filter(item=>
+                    item.name.toLowerCase() === searchTerm.toLowerCase()
+
+                )
+                setFilteredFoods(result);
+            }
+        }
         return (
         <div>
             <Navbar>
-                <input className='bg-blue-50' type="text" style={{paddingLeft:'33px',width:'30vw',height:'36px',border:'1px solid white',borderRadius:'15px'}} placeholder='Search Food Items and Tasty Stuff' />
-            <button className='bg-black text-white rounded-3xl font-bold cursor-pointer' style={{marginLeft:'1%',padding:'1px 6px',boxShadow:'1px 1px 1px black',borderRadius:'50px'}}>ok</button>
+                <input className='bg-blue-50' value={searchTerm} onChange={(e)=>setSearchTerm(e.target.value)} type="text" style={{paddingLeft:'33px',width:'30vw',height:'36px',border:'1px solid white',borderRadius:'15px'}} placeholder='Search Food Items and Tasty Stuff' />
+            <button className='bg-black text-white rounded-3xl font-bold cursor-pointer' onClick={handleSearch} style={{marginLeft:'1%',padding:'1px 6px',boxShadow:'1px 1px 1px black',borderRadius:'50px'}}>ok</button>
               <i style={{marginLeft:'-94%',color:'gray'}} className='fas fa-search'></i>
             </Navbar>
+                  
          <div className='boxparent flex flex-wrap gap-3' style={{marginLeft:'4.5%',marginTop:'1%'}}>
            
-            {foods.map((item,index)=>{
+            {filteredFoods.map((item,index)=>{
                 return(
                   <Link to={`/foodCategories/${index}`} key={item._id}>
            <div className='box flex flex-wrap' style={{height:'52vh',width:'22vw',overflow:'hidden',borderRadius:'16px',boxShadow:'1px 1px 1px 2px lightgray'}}>

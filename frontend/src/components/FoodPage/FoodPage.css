@@ -5,10 +5,33 @@
         flex-direction: column !important;
     }
     .boxparent .box{
-        width:90vw !important;
+        width:125vw !important;
+      height:60vh !important;
+    }
+    .boxparent h1{
+        font-size: 35px !important;
     }
     .boxparent .box img{
-        width:80vw !important;
+      margin-left: 6% !important;
+        width:100vw !important;
+        height:45vh !important;
     }
+    .description{
+        background-color: red !important;
+     width:125vw !important;
+    }
+    .content{
+        background-color: red !important;
+     width:125vw !important;
+    
+    }
+
+    .box button{
+        background-color: black;
+        width:40vw !important;
+     height:5vh;
+     font-size: 24px !important;
+    }
+    
     
 }

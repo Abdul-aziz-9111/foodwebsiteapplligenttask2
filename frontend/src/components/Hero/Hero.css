@@ -2,18 +2,45 @@ body{
     background-color: white !important;
 }
 @media screen and (max-width:400px) {
-    body{
-        
+    .herocontainer{
+        flex-direction: column !important;
     }
-    .left{
-        
+    .leftone{
+        background:linear-gradient(rgb(40, 176, 255) 56%,rgb(255, 66, 66),rgb(226, 158, 33)) !important;
+    width: 180vw !important;
+    height:100vh;
     }
-    .left #headingone{
-        font-size:60px !important;
-        
-    }
-    .right{
-        display: none !important;
-    }
+   #headingone{
+    font-size: 140px !important;
+    margin-left: 2% !important;
+    margin-top: 2% !important;
+   }
+   span{
+    color:rgb(255, 0, 0) !important;
+   }
+   h6{
+    font-weight: bold !important;
+    font-size: 29px !important;
+    height:13vh !important;
+    margin-left:3% !important;
+width:168vw !important;
+white-space: nowrap !important;   
+overflow-y: scroll !important;
+overflow-x: hidden !important;
+scrollbar-width: hidden !important;
+}
+
+.leftone button{
+    margin-top: 2px !important;
+    background-color: black !important;
+    height:6vh !important;
+    width:50vw !important;
+    margin-left: 3% !important;
+    font-size: 25px !important;
+
+}
+.rightbox{
+    background-color: black !important;
+}
     
 }
